@@ -35,7 +35,7 @@ function CodeFormatter() {
     <div className="code-formatter-container">
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand>React Code Formatter</Navbar.Brand>
+          <Navbar.Brand>React/Javascript Code Formatter</Navbar.Brand>
         </Container>
       </Navbar>
       <Container className="d-flex flex-column align-items-center justify-content-center h-100">
