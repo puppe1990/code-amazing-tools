@@ -1,0 +1,30 @@
+.code-formatter-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.code-formatter-textarea {
+  height: 300px;
+  resize: none;
+}
+
+.code-formatter-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.code-formatter-button:hover {
+  background-color: #0062cc;
+}
+
+.code-formatter-syntax {
+  font-size: 14px;
+  overflow-x: scroll;
+}
