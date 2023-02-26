@@ -6,12 +6,16 @@
 
 .code-formatter-textarea {
   height: 400px;
+  width: 400px;
   font-size: 16px;
   padding: 12px;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   resize: none;
+  margin: 0 auto;
+  display: block;
 }
+
 
 .code-formatter-button {
   background-color: #007bff;
@@ -21,7 +25,10 @@
   margin-top: 0.5rem;
   cursor: pointer;
   transition: background-color 0.2s;
+  display: block;
+  margin: 0 auto;
 }
+
 
 .code-formatter-button:hover {
   background-color: #0062cc;
@@ -30,4 +37,15 @@
 .code-formatter-syntax {
   font-size: 14px;
   overflow-x: scroll;
+}
+
+.navbar {
+  background-color: #343a40;
+  border-bottom: 1px solid #6c757d;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
 }

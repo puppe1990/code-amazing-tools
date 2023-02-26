@@ -33,11 +33,13 @@ function CodeFormatter() {
   return (
     <div className="code-formatter-container">
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand>Code Formatter</Navbar.Brand>
+        <Container>
+          <Navbar.Brand>Code Formatter</Navbar.Brand>
+        </Container>
       </Navbar>
-      <Container>
-        <Row className="justify-content-center">
-          <Col md={8}>
+      <Container className="d-flex flex-column align-items-center justify-content-center h-100">
+        <Form>
+          <Form.Group className="w-50">
             <Form.Control
               as="textarea"
               value={code}
@@ -45,11 +47,13 @@ function CodeFormatter() {
               placeholder="Paste your code here"
               className="code-formatter-textarea"
             />
-            <button className="code-formatter-button" onClick={handleFormat}>
-              Format
-            </button>
-          </Col>
-        </Row>
+            <div className="d-flex justify-content-end">
+              <button className="code-formatter-button" onClick={handleFormat}>
+                Format
+              </button>
+            </div>
+          </Form.Group>
+        </Form>
         {formattedCode && (
           <Row className="mt-3 justify-content-center">
             <Col md={8}>
