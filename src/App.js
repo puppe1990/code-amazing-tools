@@ -35,26 +35,35 @@ function CodeFormatter() {
     <div className="code-formatter-container">
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand>Code Formatter</Navbar.Brand>
+          <Navbar.Brand>React Code Formatter</Navbar.Brand>
         </Container>
       </Navbar>
       <Container className="d-flex flex-column align-items-center justify-content-center h-100">
-        <Form onSubmit={handleFormat}>
-          <Form.Group className="w-50">
-            <Form.Control
-              as="textarea"
-              value={code}
-              onChange={handleChange}
-              placeholder="Paste your code here"
-              className="code-formatter-textarea"
-            />
-            <div className="d-flex justify-content-end">
-              <button type="submit" className="code-formatter-button">
-                Format
-              </button>
-            </div>
-          </Form.Group>
-        </Form>
+        <Row className="justify-content-center">
+          <Col md={4}>
+            <Form.Label className="text-light">
+              This tool helps you format your JavaScript code with Prettier.
+            </Form.Label>
+          </Col>
+          <Col md={4}>
+            <Form onSubmit={handleFormat}>
+              <Form.Group>
+                <Form.Control
+                  as="textarea"
+                  value={code}
+                  onChange={handleChange}
+                  placeholder="Paste your code here"
+                  className="code-formatter-textarea"
+                />
+                <div className="d-flex justify-content-end">
+                  <button type="submit" className="code-formatter-button">
+                    Format
+                  </button>
+                </div>
+              </Form.Group>
+            </Form>
+          </Col>
+        </Row>
         {formattedCode && (
           <Row className="mt-3 justify-content-center">
             <Col md={8}>
@@ -77,7 +86,6 @@ function CodeFormatter() {
     </div>
   );
 }
-
 
 function App() {
   return (
