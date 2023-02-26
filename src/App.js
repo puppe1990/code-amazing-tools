@@ -25,6 +25,7 @@ function CodeFormatter() {
     const formatted = prettier.format(code, {
       parser: 'babel',
       plugins: [babelParser],
+      singleQuote: true,
     });
     setFormattedCode(formatted);
   }
@@ -57,7 +58,11 @@ function CodeFormatter() {
                   <FaCopy /> Copy to Clipboard
                 </button>
               </CopyToClipboard>
-              <SyntaxHighlighter language="javascript" style={darcula} className="code-formatter-syntax">
+              <SyntaxHighlighter
+                language="javascript"
+                style={darcula}
+                className="code-formatter-syntax"
+              >
                 {formattedCode}
               </SyntaxHighlighter>
             </Col>
