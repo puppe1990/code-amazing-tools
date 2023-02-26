@@ -20,7 +20,8 @@ function CodeFormatter() {
     alert('Code copied to clipboard!');
   }
 
-  function handleFormat() {
+  function handleFormat(event) {
+    event.preventDefault();
     // Use Prettier to format the code and update the formattedCode state
     const formatted = prettier.format(code, {
       parser: 'babel',
@@ -38,7 +39,7 @@ function CodeFormatter() {
         </Container>
       </Navbar>
       <Container className="d-flex flex-column align-items-center justify-content-center h-100">
-        <Form>
+        <Form onSubmit={handleFormat}>
           <Form.Group className="w-50">
             <Form.Control
               as="textarea"
@@ -48,7 +49,7 @@ function CodeFormatter() {
               className="code-formatter-textarea"
             />
             <div className="d-flex justify-content-end">
-              <button className="code-formatter-button" onClick={handleFormat}>
+              <button type="submit" className="code-formatter-button">
                 Format
               </button>
             </div>
@@ -76,6 +77,7 @@ function CodeFormatter() {
     </div>
   );
 }
+
 
 function App() {
   return (
