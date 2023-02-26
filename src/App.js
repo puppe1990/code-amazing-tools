@@ -1,4 +1,4 @@
-import CodeFormatter from './CodeFormatter';
+import CodeFormatter from './components/CodeFormatter.js';
 
 function App() {
   return (

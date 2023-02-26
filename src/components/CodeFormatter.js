@@ -6,7 +6,7 @@ import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import prettier from 'prettier/standalone';
 import babelParser from 'prettier/parser-babel';
 import { Form, Container, Row, Col, Navbar } from 'react-bootstrap';
-import '../src/components/style/CodeFormatter.css';
+import './style/CodeFormatter.css';
 
 function CodeFormatter() {
   const [code, setCode] = useState('');
